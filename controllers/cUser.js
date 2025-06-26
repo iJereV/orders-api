@@ -42,7 +42,7 @@ const cUser = {
     login: async(req,res)=>{
         try {
             const {email,password} = req.body;
-
+            console.log(email,password);
             const validation = loginSchema.safeParse({email,password});
             if (!validation.success) {
                 throw{
