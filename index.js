@@ -26,7 +26,7 @@ const app = express();
 const upload = multer();
 const port = 3000;
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true}));
+app.use(cors({ origin: 'https://bucolic-paprenjak-edf523.netlify.app', credentials: true}));
 app.use(morgan('dev'));
 app.use(helmet());
 app.use(express.json());
