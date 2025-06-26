@@ -41,17 +41,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(session({
-    secret:TOKEN_SECRET,
-    resave:false,
-    saveUninitialized: true,
-    cookie: {
-    httpOnly: true,
-    secure: false, // ⚠️ en HTTP, esto debe ser false
-    sameSite: 'None'
-  }
-}));
-
 app.use(upload.none());
 
 app.use(rUser);

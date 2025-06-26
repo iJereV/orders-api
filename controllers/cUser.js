@@ -76,7 +76,11 @@ const cUser = {
                 role: userFound.role
             });
 
-            res.cookie('token', token, { httpOnly: true, sameSite: 'Lax' });
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: true,          
+                sameSite: "None"     
+            });
 
             res.status(200).json({text: 'Inicio de sesión exitoso.'});
             
